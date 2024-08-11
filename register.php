@@ -1,5 +1,6 @@
 <?php
 
+	require('connect.php')
 ?>
 
 <!DOCTYPE html>
@@ -20,5 +21,6 @@
 		<button name="register" type="submit">Register</button>
 	</form>
 
+	<p> Already a member? <p> <a href="login.php">Login Here!</a>
 </body>
 </html>

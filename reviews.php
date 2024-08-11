@@ -20,14 +20,15 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<title>Reviews ~ </title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<title>Reviews ~ BOBAPEG</title>
 	<h1>BOBAPEG</h1>
 	<?= include('nav.php') ?>
 </head>
@@ -44,7 +45,7 @@
 		<label for="review">Write your review here:</label> <br>
 		<textarea name="review" rows="4" cols="50"></textarea> <br> <br>
 		<label for="score">Score:</label>
-		<input type="number" name="score" placeholder="Rate it out of 5"> <br>
+		<input type="number" name="score" placeholder="Rate it out of 5"> <br> <br>
 		<button name="submit" type="submit">Submit Review</button>
 	</form>
 </body>

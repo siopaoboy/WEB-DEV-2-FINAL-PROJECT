@@ -1,0 +1,13 @@
+@font-face{
+	font-family: cool;
+	src: url(cool.ttf);
+}
+
+.index h1 {
+	font-family: cool;
+}
+
+.index {
+	background: #ebd6ef;
+}
+
