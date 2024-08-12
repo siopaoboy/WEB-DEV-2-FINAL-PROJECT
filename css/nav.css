@@ -1,3 +1,16 @@
+@font-face{
+	font-family: cool;
+	src: url(cool.ttf);
+}
+
+.nav h1 {
+	font-family: cool;
+}
+
+.body {
+	background: #ebd6ef;
+}
+
 .nav ul{
 	list-style-type: none;
 }
@@ -8,5 +21,18 @@
 
 .nav li a {
 	color: black;
+	height: 100%;
+	padding: 0 30px;
+	text-duration: none;
+	display: flex;
+	align-items: center;
+}
+
+.nav li:first-child {
+	margin-right: auto;
+}
+
+.nav a:hover {
+	background: #f5b3e4;
 }
 
