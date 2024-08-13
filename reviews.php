@@ -8,20 +8,24 @@
     $review = filter_input(INPUT_POST, 'review', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $score = filter_input(INPUT_POST, 'score', FILTER_SANITIZE_NUMBER_INT);
 
-    $query = "INSERT INTO reviews (title, review, score,) VALUES (:title, :review, :score)";
+    $query = "INSERT INTO reviews (title, review, score) VALUES (:title, :review, :score)";
+
     $statement = $db->prepare($query);
         
     $statement->bindValue(':title', $title);
     $statement->bindValue(':review', $review);
-    $statement->bindValue(':score', $score, PDO::PARAM_INT);
-        
-    if ($statement->execute()) {
-    	echo "Review has been submitted successfully";
-    } else {
-    	echo "An error has occured when submitting the review. Try again.";
-    }
+    $statement->bindValue(':score', intval($score));
+  
+    $statement->execute();
 
+    header("Location: reviews.php");
   }
+
+  	// $display = "SELECT * FROM reviews ORDER BY DESC";
+
+	// $statement = $db->prepare($display);
+
+	// $statement->execute(); 	*note: make sure the data is being sent to the database before uncommneting this code
 ?>
 
 <!DOCTYPE html>
@@ -36,21 +40,37 @@
 	<title>Reviews ~ BOBAPEG</title>
 	<?= include('nav.php') ?>
 </head>
-<body>
-	<h1>Reviews</h1>
-	<h3>BOBAPEG is an ever growing business that would love to hear what customers want in order for us to grow.</h2>
+<body class="list">
 
-	<h4>We would love to hear your feedback!</p> <br>
+	<h1><u>Reviews</u></h1> <br>
 
-	<h3>Let us know what you think about us!</h3>
+	<h3>Tell us what you think!</h3> <br>
 	<form method="POST" action="reviews.php">
 		<label for="title">Give a title to your review:</label>
-		<input type="text" name="title"> <br> <br>
+		<input type="text" name="title" required> <br> <br>
+
 		<label for="review">Write your review here:</label> <br>
-		<textarea name="review" rows="4" cols="50"></textarea> <br> <br>
+		<textarea name="review" rows="4" cols="50" required></textarea> <br> <br>
+
 		<label for="score">Score:</label>
-		<input type="number" name="score" placeholder="Rate it out of 5"> <br> <br>
+		<input type="number" name="score" placeholder="Rate it out of 5" required> <br> <br>
+
 		<button name="submit" type="submit">Submit Review</button>
-	</form>
+	</form> <br> <br>
+
+	<h2>Take a look at what our BOBAPEGGERS had to say from us!</h2>
+	<!-- 	<ul>
+		<?php while($row = $statement->fetch()): ?>
+			<li><h3><?= $row['title'] ?></h3></li>
+			<li><p><?= $row['content'] ?></p></li>
+			<li>Created/Updated:<?= $row['date'] ?></li>
+			<li><?= $row['score'] ?>/5</li>
+			<a href="">Edit Review</a> 
+		<?php endwhile ?> <br>
+
+		*note: display results once you fix values being sent to the database	
+	</ul> -->
+
+	<h4><i>We would love to hear feedback from our BOBAPEGGERS!</i><h4>
 </body>
 </html>
