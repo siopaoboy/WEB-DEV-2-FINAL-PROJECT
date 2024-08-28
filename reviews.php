@@ -6,9 +6,13 @@
 
     $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $review = filter_input(INPUT_POST, 'review', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $score = filter_input(INPUT_POST, 'score', FILTER_SANITIZE_NUMBER_INT);
+    $score = filter_input(INPUT_POST, 'score', FILTER_VALIDATE_INT);
 
     $query = "INSERT INTO reviews (title, review, score) VALUES (:title, :review, :score)";
+
+    // if ($score < 1 || $score > 5) {
+    // 	echo "Please select a score between 1 and 5";
+    // }
 
     $statement = $db->prepare($query);
         

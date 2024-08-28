@@ -10,7 +10,6 @@
 	<title>FAQS</title>
 </head>
 <body>
-	<h1>FAQS</h1>
 	<?= include('nav.php'); ?>
 </body>
 </html>

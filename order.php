@@ -27,29 +27,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 	<title>Order Online! ~ BOBAPEG</title>
-	<h1>BOBAPEG</h1>
 	<?= include('nav.php'); ?>
 </head>
 <body class="order">
 
-	<h1>Order Here!</h1>
-	<h3>Order Online And Have It Delivered To Your Door</h3>
+	<h1><u>Order Here!</u></h1> <br>
+	<h3>Order Online And Have It Delivered To Your Door</h3> <br>
 
 	<strong><a href="myOrders.php">My Order History</a></strong>
 
 	<form method="POST">
 
 		<h4> Choose Your Flavour</h4>
-		<select name="flavour">
-			<option value="">Select Flavour</option>
+		<select name="flavour"> 
+			<option value="">Select Flavour</option> 
 			<option value="mais CON FUSION CORNER yelo">mais CON FUSION CORNER yelo</option>
 			<option value="BLUEberry BOMBERS">BLUEberry BOMBERS</option>
 			<option value="ROYAL CANADIAN MINT chocolate">ROYAL CANADIAN MINT chocolate</option>
 			<option value="RED RIVER of strawberries">RED RIVER of strawberries</option>
-		</select>
+		</select> 
 
 		<h4>Pick Your Sugar Level</h4>
 		<select name="sugar"> 

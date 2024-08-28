@@ -1,5 +1,10 @@
-body ul li {
+.list ul {
+	border: 20px black;
+	border-radius: 5px;
+}
+
+.list ul li {
 	list-style-type: none;
 	display: inline-block;
-	
 }
+

@@ -1,6 +1,14 @@
 .index {
-	background: #ebd6ef;
+	background-color: #ebd6ef;
 }
 
-.
+.index h1 {
+	text-align: center;
+
+}
+
+#boba p {
+	color: white;
+}
+
 

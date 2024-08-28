@@ -1,14 +1,16 @@
 @font-face{
-	font-family: cool;
-	src: url(cool.ttf);
+	font-family: cute;
+	src: url(cute.ttf);
 }
 
-.nav h1 {
-	font-family: cool;
-}
 
 .body {
 	background: #ebd6ef;
+}
+
+.body h1 {
+	text-align: center;
+	font-family: cool;
 }
 
 .nav ul{
